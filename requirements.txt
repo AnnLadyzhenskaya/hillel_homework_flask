@@ -1,0 +1,2 @@
+# Main framework
+Flask==2.2.3
