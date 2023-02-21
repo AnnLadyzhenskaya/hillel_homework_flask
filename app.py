@@ -1,6 +1,7 @@
 from flask import Flask, request
 from faker import Faker
 import requests
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -32,7 +33,15 @@ def generate_users():
 
 @app.get("/mean/")
 def calculate_mean():
-    pass
+    inches_to_cm = 2.54
+    pounds_to_kg = 0.45359237
+    df = pd.read_csv("./static/hw.csv")
+    df = df.rename(columns=lambda x: x.strip())
+
+    mean_height = df['"Height(Inches)"'].mean() * inches_to_cm
+    mean_weight = df['"Weight(Pounds)"'].mean() * pounds_to_kg
+
+    return {"avg_height_cm": round(mean_height, 2), "avg_weight_kg": round(mean_weight, 2)}
 
 
 @app.get("/space/")

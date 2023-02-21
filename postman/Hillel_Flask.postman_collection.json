@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "736cf00a-033f-4d9f-8fdc-862f05686130",
+		"name": "Hillel_Flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1237624"
+	},
+	"item": [
+		{
+			"name": "/requirements/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:5000/requirements/"
+			},
+			"response": []
+		},
+		{
+			"name": "/generate-users/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/generate-users/?count=5",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"",
+						"generate-users",
+						""
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/space/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:5000/space"
+			},
+			"response": []
+		},
+		{
+			"name": "/mean/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:5000/mean"
+			},
+			"response": []
+		}
+	]
+}
