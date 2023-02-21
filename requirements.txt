@@ -1,2 +1,9 @@
 # Main framework
 Flask==2.2.3
+
+# for data emulation
+Faker==17.0.0
+
+# for external API requests
+requests==2.28.2
+
